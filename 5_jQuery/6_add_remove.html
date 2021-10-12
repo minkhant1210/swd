@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove</title>
+</head>
+<body>
+
+    <ul id="list">
+        <li>apple</li>
+        <li>mango</li>
+        <li>strawberry</li>
+        <li>tamarind</li>
+    </ul>
+<script src="js/jQuery.js"></script>
+<script>
+
+    $("#list").append(`<li>lemon</li>`);
+    $("#list").append('<li>orange</li>');
+
+    $("#list").prepend("<li>one</li>");
+    $("#list").prepend(`<li>two</li>`);
+
+    $("#list").after(`<p>this is after the list</p>`);
+    $("p").attr("class", "para");
+    $("#list").before('<p>this is before the list</p>');
+    $("p").attr("class", "para");
+
+    $("#list").empty();
+    $("#list").remove();
+
+   $(".para").empty();
+   $(".para").remove();
+
+
+</script>
+</body>
+</html>

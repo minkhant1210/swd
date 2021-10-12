@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+
+<script>
+
+    function testCallback(x){
+        console.log("the final result is",x);
+    }
+
+    function test(x,y,callback){
+        let z = x*y;
+        callback(z);
+    }
+
+test(4,4,testCallback);
+</script>
+    
+</body>
+</html>

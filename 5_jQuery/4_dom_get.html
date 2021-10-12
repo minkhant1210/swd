@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Get</title>
+</head>
+<body>
+
+    <p class="p">This is paragraph</p>
+
+    <input type="text" class="input">
+    <br><br>
+
+    <select name="" id="select">
+        <option value="Myanmar">Myanmar</option>
+        <option value="Japan">Japan</option>
+        <option value="Korea">Korea</option>
+        <option value="English">English</option>
+    </select>
+    <br><br>
+
+    <button class="btn">Clcik</button>
+    
+<script src="js/jQuery.js"></script>
+<script>
+
+    $(".btn").click(() => {
+        let i = $(".input").val();
+        // console.log(i); 
+    });
+
+    $(".btn").click(() => {
+        let d =$(".p").text();
+        // console.log(d);
+    });
+
+    $(".btn").click(() => {
+        let s = $("#select").val();
+        console.log(s);
+    });
+
+    $(".btn").click(() => {
+        let a = $(".input").attr("type");
+        console.log(a);
+    })
+
+</script>
+</body>
+</html>

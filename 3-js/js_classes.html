@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+
+
+<script>
+
+    //OBJECTS
+    let obj = {
+        //properties
+        name : "MIn Khant Zaw",
+        age : 21,
+        job : "student",
+        //methods
+        eat: function(){
+            console.log(this.name + " is eating")
+        }
+    }
+
+    //CLASSES
+    class Me{
+        //properties
+        name = "Min Khant";
+        age = 22;
+        job = "Gamer";
+        //acess modifier
+        #gf = "Yu bo";
+
+        //methods
+        introduction(){
+            console.log(`${this.name} is ${this.age} years old`)
+        }
+        //method to call acess modifier
+        showGf(){
+            console.log(`${this.name}'s girlfriend is ${this.#gf}`)
+        }
+    }
+
+    class Reg{
+        //constructor method or magic method
+        constructor(name, age, job){
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            console.log(this.name + " is"+this.age +"old and doing"+this.job)
+            console.log("this is constructor");
+        }
+
+        //prototype method
+        get showDob(){
+            let currrentYear = 2021;
+            return currrentYear - this.age;
+        }
+
+        //static method
+
+        static testStatic(){
+            console.log("this is static")
+        }
+    }
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Project</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+        }
+
+        .keys{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .pianoKeys{
+            width: 50px;
+            height: 150px;
+            background-color: #fff;
+            color: red;
+        }
+        .pianoKeys:nth-child(even){
+            background-color: black;
+        }
+        .pianoKeys:-ms-keyboard-active{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="keys">
+        <button onclick="run('C4')" class="pianoKeys">C4</button>
+        <button onclick="run('D4')" class="pianoKeys">D4</button>
+        <button onclick="run('E4')" class="pianoKeys">E4</button>
+        <button onclick="run('F4')" class="pianoKeys">F4</button>
+        <button onclick="run('G4')" class="pianoKeys">G4</button>
+        <button onclick="run('A4')" class="pianoKeys">A4</button>
+        <button onclick="run('B4')" class="pianoKeys">B4</button>
+        <button onclick="run('C5')" class="pianoKeys">C5</button>
+    </div>
+        <br>    
+    <div class="box">
+        
+    </div>
+  
+        <ul class="list"></ul>
+
+    
+<script>
+
+    let chords = document.querySelector("#chords");
+    let saveChords = document.getElementById("saveChords");
+    let memory = [];
+    let list = document.querySelector(".list");
+
+    function run(x){
+        let a = new Audio(`sound/${x}.mp3`);
+        a.play();
+        chords.value += x+",";
+    }
+
+    let m = ["A4","C4","D4","C5","B4","E4","A4","C4","D4","C5","B4","E4","A4","C4","D4","C5","B4","E4"];
+
+    function runMemory(arr, delay = 500){
+        let x = delay;
+        arr.map(el => {
+        setTimeout(run,x,el);
+        x += delay;
+    });
+    }
+
+    saveChords.onclick = function(){
+        let input = chords.value;
+        console.log(input);
+        memory.push(input);
+        console.log(memory);
+        chords.value = "";
+        list.innerHTML = "";
+        memory.map((el,x) => {
+            list.innerHTML += `<li>${el}<button onclick="replay(${x})">Replay</button></li>`
+        })
+    }
+
+    function replay(x){
+        let toPlay = memory[x].split(",");
+        toPlay.pop();
+        console.log(toPlay);
+        runMemory(toPlay);
+        chords.value = "";
+    }
+
+    document.addEventListener("keyup", function(e){
+        // console.log(e["keyCode"]);
+        let keyCode = e["keyCode"];
+        // console.log(keyCode);
+        // if(keyCode == "65"){
+        //     run('C4');
+        // }
+        switch(keyCode){
+            case 65:
+                run('C4');
+                break;
+            case 83:
+                run('D4');
+                break;
+            case 68:
+                run('E4');
+                break;
+            case 70:
+                run('F4');
+                break;
+            case 74:
+                run('G4');
+                break;
+            case 75:
+                run('A4');
+                break;
+            case 76:
+                run('B4');
+                break;
+            case 186:
+                run('C5');
+                break;
+                default:
+                    console.log("Press anything to play");
+            };
+        });
+                
+            
+
+</script>
+    
+</body>
+</html>

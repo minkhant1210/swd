@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Shapes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 200vh;
+        }
+        .header{
+            text-align: center;
+            color: blue;
+        }
+        span{
+            color: rgb(57, 221, 153);
+        }
+        .square{
+            height: 25vh;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box-square{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 20px auto;
+            
+        }
+        .box-rounded{
+            border-radius: 8px;
+        }
+        .box-rect{
+            width: 200px;
+        }
+
+        .circle{
+            height: 25vh;
+            background-color: rgb(206, 238, 206);
+            box-shadow: 6px 0px 9px 2px black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .circle-1{
+            width: 100px;
+            height: 100px;
+            border: 2px solid gray;
+            margin: 20px auto;
+            border-radius: 50%;
+            background-color: gray;
+        }
+        .circle-2{
+            width: 100px;
+            height: 100px;
+            border: 2px solid gray;
+            margin: 20px auto;
+            border-radius: 50%;
+            /* background-color: gray; */
+            background-image: url(img/download.jpg);
+            background-size: cover;
+        }
+        .circle-3{
+            width: 100px;
+            height: 100px;
+            border: 2px solid gray;
+            margin: 20px auto;
+            border-radius: 50%;
+            /* background-color: gray; */
+            background-image: url(img/fe37c1c333cc46d1c159290be6db5e3e.jpg);
+            background-size: cover;
+        }
+        .triangle{
+            height: 40vh;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .triangle-1{
+            border: 100px solid white;
+            border-bottom-color: coral;
+        }
+        .triangle-2{
+            border: 100px solid white;
+            border-bottom-color: coral;
+            border-right-color: coral;
+        }
+        .triangle-3{
+            border: 100px solid coral;
+            border-top-color: thistle;
+            border-bottom-width: 37px;
+            border-top-width: 75px;
+            margin-top: 85px;
+        }
+
+        .header-2{
+            text-align: center;
+            color: crimson;
+            margin: 70px auto;
+        }
+        .homework{
+            height: 50vh;
+            background-color: rgb(206, 238, 206);
+            box-shadow: 6px 0px 9px 2px black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .homework-1{
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            background-color: teal;
+            border: 100px solid teal;
+            border-left-color: rgb(206 238 206);
+            position: relative;
+            /* border-left: none; */
+        }
+        .homework-1::after{
+            content: "";
+            background-color: black;
+            position: absolute;
+            display: inline-block;
+            border: 100px solid black;
+            top: auto;
+            bottom: -100px;
+            left: 200px;
+            border-left-color: teal;
+            border-top-color: rgb(206 238 206);
+            border-right-color: rgb(206 238 206);
+            border-bottom-color: rgb(206 238 206);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="header" style="margin-bottom: 20px;"><span>CSS</span> Basic Shapes</h1>
+
+    <div class="square">
+        <div class="">
+            <h3>square box</h3>
+            <div class="box-square"></div>
+        </div>
+        <div class="">
+            <h3>Rounded-box</h3>
+            <div class="box-square box-rounded"></div>
+        </div>
+        <div class="">
+            <h3>Rectangular-box</h3>
+            <div class="box-square box-rect"></div>
+        </div>
+    </div>
+
+    <div class="circle">
+        <div class="">
+            <h3>Circle</h3>
+            <div class="circle-1"></div>
+        </div>
+        <div class="test">
+            <h3>squareImage</h3>
+            <div class="circle-2"></div>
+        </div>
+        <div class="">
+            <h3>unSquareImage</h3>
+            <div class="circle-3"></div>
+        </div>
+    </div>
+
+    <div class="triangle">
+        <div>
+            <h3 style="text-align: center;">Triangle</h3>
+            <div class="triangle-1"></div>
+        </div>
+        <div>
+            <h3>Right Triangle</h3>
+            <div class="triangle-2"></div>
+        </div>
+        <div>
+            <h3>Envelope</h3>
+            <div class="triangle-3"></div>
+        </div>
+    </div>
+
+    <h1 class="header-2">Home <span>Work</span></h1>
+    <div class="homework">
+        <div class="homework-1"></div>
+    </div>
+
+</body>
+</html>

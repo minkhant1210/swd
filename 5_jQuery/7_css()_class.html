@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css() Class</title>
+    <style>
+        /* .p{
+            color: red;
+            margin: 20px;
+            font-size: 30px;
+        } */
+
+        .forText{
+            color: brown;
+            font-size: 40px;
+            font-family: serif;
+            margin: 10px auto;
+        }
+        .forText2{
+            margin-left: 100px;
+            margin-top: 100px ;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="p one two three">Min Galar Par</p>
+    <button class="btn">click</button>
+    
+<script src="js/jQuery.js"></script>
+<script>
+
+    // $(".btn").click(() => {
+    //     let p = $(".p").css("fontSize");
+    //     console.log(p);
+    // });
+
+    // $(".btn").click(() => {
+    //     let p = $(".p").addClass("forText forText2");
+    // });
+
+    $(".btn").click(() => {
+        let p = $(".p").toggleClass("forText");
+    });
+
+</script>
+</body>
+</html>

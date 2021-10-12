@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 3000px;
+        }
+        .one{
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+        }
+        .two{
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            position: absolute;
+            left: 200px;
+            z-index: -1;
+        }
+        .three{
+            width: 350px;
+            height: 350px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+        .btn{
+            padding: 10px 15px;
+            background: chocolate;
+            border: none;
+            position: fixed;
+            top: 150px;
+            right: 100px;
+            border-radius: 4px;
+        }
+        .btn:active{
+            background-color: white;
+            transition: 0.3s;
+        }
+        .p-sticky{
+            background-color: blanchedalmond;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            padding: 10px 15px;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 2px solid blue;
+            margin-top: 110px;
+        }
+        .small-box{
+            width: 50px;
+            height: 50px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+
+    <button class="btn">fixed</button>
+
+    
+        <p style="color: rgb(233, 181, 181);">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio excepturi soluta quam qui doloremque quas sit, natus, dicta officia iusto fugit modi ex repellat possimus iste, enim dolor cum provident.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, eveniet minima dolor nobis quae quos doloribus iste explicabo tempore iure facere, praesentium quibusdam, placeat qui omnis natus voluptatibus sint dolorem!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea exercitationem fuga, quaerat expedita molestiae cupiditate corporis a ratione laborum, non architecto! Unde quo doloribus deserunt labore aperiam quis asperiores facilis.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima delectus dolor odit eligendi officia modi, eos totam quod voluptatibus, culpa porro adipisci labore atque quo animi quidem! Nisi, architecto illo.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure facilis doloremque magnam deserunt quas debitis excepturi, esse labore voluptatum quisquam minima ut. Perspiciatis culpa ipsam est cum nihil, obcaecati quasi?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea incidunt reprehenderit fuga ut maxime aut est enim illo, dolore adipisci saepe, ad error dicta, minus optio eligendi dolores aperiam eaque?
+        </p>
+    <div class="p-sticky">
+        <h1 style="color: red;  box-shadow: 0px 0px 5px 0px black;">I'm Sticky</h1>
+    </div>
+
+    <div class="box">
+        <div class="small-box"></div>
+    </div>
+
+</body>
+</html>

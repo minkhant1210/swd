@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 528px;
+            height: 500px;
+            background-image: url(images/Capture.png);
+            margin: 50px auto;
+            position: relative;
+        }
+        .luu{
+            position: absolute;
+            top: 285px;
+            left: 155px;
+        }
+        .boy{
+            width: 100px;
+            transform: translateX(-100px);
+            animation: toLeft 5s linear ;
+        }
+        .girl{
+            width: 100px;
+            transform: translateX(100px);
+            animation: toRight 5s linear;
+        }
+        .knife{
+            width: 100px;
+            position: absolute;
+            top: 290px;
+            left: 190px;
+            animation: slice 4s;
+        }
+
+        .fa{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: toUp 6s linear;
+        }
+
+        @keyframes slice{
+            0%{
+                top: 500px;
+            }
+            40%{
+                top: 290px;
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(60deg);
+            }
+            60%{
+                transform: rotate(0deg);
+            }
+            70%{
+                transform: rotate(60deg);
+            }
+            80%{
+                transform: rotate(0deg);
+            }
+            90%{
+                transform: rotate(60deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes toLeft {
+            0%{
+                transform: translateX(-100px);
+            }
+            20%{
+                transform: translateX(0px);
+            }
+            80%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(-100px);
+            }
+        }
+        @keyframes toRight{
+            0%{
+                transform: translateX(100px);
+            }
+            20%{
+                transform: translateX(0px);
+            }
+            80%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(100px);
+            }
+        }
+        @keyframes toUp{
+            0%{
+                top: 500px;
+            }
+            80%{
+                top: 500px;
+            }
+            100%{
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="luu">
+            <img src="images/boy.png" alt="" class="boy">
+            <img src="images/girl.png" alt="" class="girl">
+        </div>
+        <img src="images/knife.png" alt="" class="knife">
+
+        <div class="fa">
+            <div class="" style="text-align: center;">
+                <img src="images/fa.png" alt="" style="width: 100px;">
+                <p>Forever Alone</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

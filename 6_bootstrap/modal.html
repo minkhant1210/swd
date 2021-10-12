@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Modal</title>
+</head>
+<body>
+   
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary m-5" id="show">Show Modal</button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            Hello Mingalar Par Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nihil necessitatibus voluptates, harum possimus, dolorum qui, voluptatem eveniet suscipit cum voluptatibus ab a magnam facilis et minima! Itaque, dolore fugit!Lorem
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque quod minus mollitia voluptate doloribus repellat eligendi quam corrupti magni, saepe consequuntur sit praesentium rerum repudiandae. In totam tempora recusandae.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum sapiente voluptate delectus commodi est, quaerat aliquam accusamus perferendis reiciendis? Dolor exercitationem id aliquam rerum sint atque repellendus harum voluptas itaque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit necessitatibus in officiis dolorum molestiae labore nobis! Saepe minima ab, ad quas dicta fugit vitae perferendis veritatis vel aut facere quo.lorem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, labore, porro doloremque cumque atque nam minus maiores pariatur possimus reiciendis in tenetur dolorem deserunt cupiditate enim? Deleniti, odit quasi!
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#show").click(()=>{
+        $("#exampleModal").modal("toggle");
+    })
+</script>
+</body>
+</html>

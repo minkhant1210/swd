@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Part-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gainsboro;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one{
+            margin-right: 50px;
+            animation: toRight 1.5s ease-in;
+        }
+        .two{
+            width: 500px;
+        }
+        h1{
+            margin-bottom: 20px;
+            animation: toLeft 1.5s ease-in-out;
+        }
+        p{
+            animation: toLeft 2s ease-in-out;
+        }
+        .heart{
+            width: 50px;
+            position: fixed;
+            bottom: 100px;
+            margin: auto;
+            right: 50%;
+            animation: shake 0.3s infinite alternate;
+        }
+
+        @keyframes toRight{
+            from{
+                transform: translateX(-550px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes toLeft{
+            from{
+                transform: translateX(550px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes shake{
+            from{
+                transform: scale(1.2);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <img src="img/9.jpg" alt="" style="width: 350px; border-radius: 10px;">
+        </div>
+        
+        <div class="two">
+            <h1>Terroblade</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam natus, autem eaque corporis nobis eveniet consequatur deleniti ab nesciunt corrupti. Quisquam voluptates consequuntur tenetur deleniti ullam asperiores id modi at?
+            </p>
+        </div>
+    </div>
+
+    <img src="img/love.svg" alt="" class="heart">
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+
+        .animate{
+            width: 300px;
+            height: 100px;
+            background-color: chocolate;
+            margin-top: 10px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="animate1">Animated 1</button>
+    <button class="animate2">Animate 2</button>
+    <button class="animate3">Animate 3</button>
+    <button class="animate4">Animate 4</button>
+    <div class="animate"></div>
+
+<script src="js/jQuery.js"></script>
+<script>
+
+    $(".animate1").click(() => {
+        $(".animate").animate({opacity: "toggle",height:"toggle",width:"toggle"},1000,() => {
+            console.log("The object is toggled the opacity");
+        });
+    });
+
+    $(".animate2").click(() => {
+        $(".animate").animate({
+            left: "+=100px",
+            top: "100px",
+            width:  "+=100px",
+            height:  "+=100px"
+        },2000,() => {
+            console.log("The object is shiftted increasing width and height");
+        });
+    });
+
+    $(".animate3").click(() => {
+        let div = $(".animate");
+        div.animate({height: "400px", opacity: 0.5},1000);
+        div.animate({width: "500px", opacity: 0.8},1000);
+        div.animate({height: "100px", opacity: 0.5},1000);
+        div.animate({width: "300px", opacity: 1},1000);
+    });
+
+    $(".animate4").click(() => {
+        let div = $(".animate");
+        div.animate({left: "200px",top:"200px",opacity:"0.5"},1000);
+    });
+
+</script>
+
+</body>
+</html>

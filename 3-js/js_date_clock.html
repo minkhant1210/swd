@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <h4>ချိန်ကိုက်ဗုန်း</h4>
+    <ul>
+        <li>setTimeout(function, milliseconds)</li>
+        <li>clearTimeout(function)</li>
+    </ul>
+    <h4>အချိန်မှန်</h4>
+    <ul>
+        <li>setInterval(function, milliseconds)</li>
+        <li>clearInterval(function)</li>
+    </ul>
+
+    <p style="font-size: 25px;"></p>
+    <button>Stop</button>
+    
+<script>
+
+let p = document.querySelector("p");
+let button = document.querySelector("button");
+
+ function showTime(){
+    let d = new Date();
+    p.innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}` 
+    // console.log("this is test"+ Math.random())
+}
+
+let run = setInterval(showTime, 1000);
+
+button.addEventListener("click", function(){
+    clearInterval(run);
+})
+
+</script>
+</body>
+</html>

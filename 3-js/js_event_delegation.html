@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delgation</title>
+</head>
+<body>
+
+    <h4>Event Delegationn</h4>
+    <button onclick="showList()">Show List</button>
+    <ul class="output"></ul>
+
+<script>
+
+    let output = document.querySelector(".output");
+    let arr = ["apple", "mango", "orange", "banana", "tamarind", "lemon", "strawberry", "new one"];
+
+    let addli = function(x){
+        let li = document.createElement("li");
+        let content = document.createTextNode(x);
+        li.appendChild(content)
+        output.appendChild(li);
+    };
+
+    function showList(){
+        arr.map(el => {
+        addli(el);
+    });
+    };
+
+    output.addEventListener("click", (el) => {
+        let list = el.target
+        console.log(list.innerHTML);
+    })
+    
+    // let li = document.querySelectorAll("li");
+    // // console.log(li)
+    // li.forEach(el => {
+    //     el.addEventListener("click", function(){
+    //         console.log(el.innerHTML);
+    //     });
+    // })
+
+    // arr.map(function(el){
+    //     let li = document.createElement("li");
+    //     console.log(li)
+    //     let content = document.createTextNode(el);
+    //     console.log(content);
+    //     li.append(content);
+    //     output.append(li)
+    // });
+        
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Part-3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blanchedalmond;
+        }
+        .obj{
+            width: 50px;
+            height: 50px;
+            background-color: #1e6262;
+            border-radius: 50px;
+            border: 5px solid #b31e6f;
+            border-color: #f5587b #59d4e8;
+            transform: translate(900px, 500px);
+            animation: test 5s linear;
+        }
+
+        @keyframes test {
+
+            0%{
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+            10%{
+                transform: translate(200px, 500px) rotate(180deg);
+            }
+            20%{
+                transform: translate(300px, 250px) rotate(360deg);
+            }
+            30%{
+                transform: translate(400px, 500px) rotate(540deg);
+            }
+            40%{
+                transform: translate(500px, 350px) rotate(720deg);
+            }
+            50%{
+                transform: translate(600px, 500px) rotate(900deg);
+            }
+            100%{
+                transform: translate(900px, 500px) rotate(1080deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="obj"></div>
+
+</body>
+</html>

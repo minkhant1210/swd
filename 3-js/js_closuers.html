@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closuers(nested loops)</title>
+</head>
+<body>
+
+<script>
+
+function aa(){
+        console.log("this is aa");
+        function bb(){
+            console.log("this is bb");
+        }
+        bb();
+    };
+    aa();
+
+function cc(x){
+    console.log("this is",x);
+    return function(){
+        console.log("this is return function");
+    }
+}
+cc(1)()
+
+function dd(x,y){
+    let result = x*y;
+    function ddd(z){
+        console.log("the result is",z);
+    };
+    ddd(result);
+}
+
+dd(2,2);
+
+function ee(x,y){
+    let total = x+y;
+    return function(){
+        console.log(`the total is ${total}`);
+    };
+};
+ee(5,5)();
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #e0b0a4;
+        }
+        #uploader{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            /* background-color: #DDD3C3; */
+            border-radius: 15px;
+            /* width: 30%; */
+            margin-bottom: auto;
+        }
+        #uploaderImg{
+            width: 70px;
+        }
+        #upload{
+            display: none;
+        }
+        #gallery{
+            width: 900px;
+            margin: 20px auto;
+            columns: 3 250px;
+            column-gap: 10px;
+            background-color: #8A979A;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .galleryImg{
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="uploader">
+        <img src="img/upload-06.png" alt="" id="uploaderImg">
+    </div>
+    <input type="file" id="upload" accept="image/jpeg,image/png" multiple>
+    <div id="gallery"></div>
+
+<script>
+
+    let uploader = document.querySelector("#uploader");
+    let upload = document.querySelector("#upload");
+    let preview = document.querySelector("#preview");
+    let gallery = document.querySelector("#gallery");
+
+    function addToGallery(src){
+        let img = new Image();
+        img.src = src;
+        img.classList = "galleryImg";
+        gallery.appendChild(img);
+    }
+
+    uploader.addEventListener("click", () => {
+        upload.click();
+    });
+
+    upload.addEventListener("change", function(){
+        let photo = this.files;
+        
+        for(let i =0; i < photo.length; i++){
+            const reader = new FileReader();
+            reader.addEventListener("load",function(){
+            console.log(reader.result);
+            addToGallery(reader.result);
+        });
+        reader.readAsDataURL(photo[i]);
+        };
+        
+        });
+
+</script>
+</body>
+</html>

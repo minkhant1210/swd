@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Set</title>
+</head>
+<body>
+
+    <p id="p">This is paragraph</p>
+    <input type="text" name="" id="input">
+    <br>
+    <select name="" id="select">
+        <option value="Myanmar">Myanmar</option>
+        <option value="English">English</option>
+        <option value="Japan">Japan</option>
+        <option value="Korea">Korea</option>
+    </select>
+    <br>
+    <button class="btn">Click</button>
+
+<script src="js/jQuery.js"></script>
+<script>
+
+    $(".btn").click(() => {
+       let p = $("#p").html("The paragraph has changed");
+    //    console.log(p);
+    });
+
+    $(".btn").click(() => {
+        // let i = $("#input").val("I insert something");
+        // console.log(i);
+    });
+
+    $(".btn").click(() => {
+        let s = $("#select").val("Japan");
+    });
+
+    $(".btn").click(() => {
+        let a = $("#input").attr("placeholder", "write something");
+    });
+
+    $(".btn").click(() => {
+        let attr = $("#p").attr("title", "paragraph");
+    });
+
+</script>
+</body>
+</html>

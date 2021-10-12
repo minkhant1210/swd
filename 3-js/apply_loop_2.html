@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Loop 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,300;1,500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body{
+            background-image: linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
+            /* color: #fff; */
+        }
+        .news{
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 250px;
+            column-gap: 10px;
+        }
+        .card{
+            width: 100%;
+            margin-top: 10px;
+            background-color: #cdd5d5;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        .card_img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .title{
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .author{
+            margin-top: 20px;
+            font-size: 10px;
+        }
+        .description{
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .read_more{
+            margin-top: 10px;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="news">
+        
+    </div>
+
+<script src="api/news_data.js"></script>
+<script>
+console.log(data)
+let articles = data.articles;
+let news = document.querySelector(".news");
+
+// articles.map(function(el, index){
+//     console.log(el)
+//     news.innerHTML += `
+//     <div class="card">
+//         <img src="${el.urlToImage}" alt="" class="card_img">
+//         <h4 class="title">${el.title}</h4>
+//         <small class="author">${el.author}</small>
+//         <p class="description">${el.description}</p>
+//         <a href="el.url" class="read_more">Read More</a>
+//     </div>
+// `;
+// });
+
+
+for(let i = 0; i < articles.length; i++){
+    // console.log(articles[i].author);
+    news.innerHTML += `
+    <div class="card">
+        <img src="${articles[i].urlToImage}" alt="" class="card_img">
+        <h4 class="title">${articles[i].title}</h4>
+        <small class="author">${articles[i].author}</small>
+        <p class="description">${articles[i].description}</p>
+        <a href="articles[i].url" class="read_more">Read More</a>
+    </div>
+`;
+}
+
+// for(let i in articles){
+//     console.log(articles[i].author);
+// }
+
+// for(let i of articles){
+//     console.log(i.author);
+// }
+
+</script>
+</body>
+</html>

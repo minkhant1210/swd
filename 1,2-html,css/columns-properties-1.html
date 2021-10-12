@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap" rel="stylesheet">
+    <title>Column Properties</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Zen Loop', cursive;
+        }
+        body{
+            margin: 15px;
+        }
+        .header{
+            text-align: center;
+            color: #278ea5;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+        span{
+            color: #ffd615;
+        }
+        .paragraph{
+            font-size: 23px;
+            column-count: 3;
+            column-width: 300px;
+            column-rule: 1px solid#f5587b;
+            column-gap: 25px;
+        }
+        p{
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 600px){
+            .header{
+                margin-bottom: 15px;
+            }
+            p{
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="header">Css <span>Colunm</span> Porperties</h1>
+    <div class="paragraph">
+        <p style="column-span: all;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p style="column-span: all; margin-top: 10px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam temporibus debitis beatae, nemo eius quod voluptate sunt molestias, dolorum voluptas voluptates, veniam doloremque porro quas consectetur? Nihil, tempore alias?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, ad ut similique iusto nulla laboriosam temporibus vel doloribus illum expedita rerum, odio laborum cumque. Hic quo aspernatur enim sint sapiente!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at nam ipsa perferendis quasi, alias quam similique quas unde reiciendis possimus officia vero rerum voluptates maiores illo ad soluta expedita?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt temporibus quo dolor magni, nisi quam nulla saepe facere minus est? Facilis cum quidem excepturi provident laboriosam autem ea suscipit.
+        </p>
+    </div>
+
+</body>
+</html>

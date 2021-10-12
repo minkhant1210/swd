@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 1</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr,td{
+            padding: 10px 15px;
+            border: 1px solid black;
+        }
+        .black{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h4>Global Table</h4>
+    <table>
+        <tbody id="tb">
+            
+        </tbody>
+    </table>
+
+    <h4>COuntry Table</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>Number</td>
+                <td>Countries</td>
+                <td>Total Comfirmed</td>
+                <td>Total Deaths</td>
+            </tr>
+        </thead>
+        <tbody id="ctb">
+            
+        </tbody>
+    </table>
+
+
+<script src="api/covid_data.js"></script>
+<script>
+
+let global = data.Global;
+let Countries = data.Countries;
+console.log(data.Countries);
+let tb = document.getElementById("tb");
+let ctb = document.querySelector("#ctb");
+for(let i in global){
+    tb.innerHTML += `
+    <tr>
+        <td>${i}</td>
+        <td>${global[i]}</td>
+    </tr>
+    `;
+};
+
+let i = 1;
+for(x of Countries){
+    ctb.innerHTML += `
+    <tr>
+        <td>${i}</td>
+        <td>${x.Country}</td>
+        <td>${x.TotalConfirmed}</td>
+        <td>${x.TotalDeaths}</td>
+    </tr>
+    `;
+    i++;
+}
+
+// Countries.map(function(el, index){
+//     ctb.innerHTML += `
+//     <tr>
+//         <td>${index+1}</td>
+//         <td>${el.Country}</td>
+//         <td>${el.TotalConfirmed}</td>
+//         <td>${el.TotalDeaths}</td>
+//     </tr>
+//     `;
+//     });
+
+// for(let i = 0; i < Countries.length; i++){
+//     // console.log(i);
+//     // console.log(Countries[i].CountryCode);
+//     ctb.innerHTML += `
+//     <tr>
+//         <td>${i+1}</td>
+//         <td>${Countries[i].Country}</td>
+//         <td>${Countries[i].TotalConfirmed}</td>
+//         <td>${Countries[i].TotalDeaths}</td>
+//     </tr>
+// `;
+// }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body{
+            background-color: #f5f5f5;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #c5e3f6;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .pf{
+            color: #3d5af1;
+        }
+        .pf span{
+            color: #22d1ee;
+        }
+        .navBtn{
+            display: none;
+        }
+        .nav{
+            display: block;
+            margin-left: 100px;
+        }
+        .navList{
+            padding: 0;
+        }
+        .navList li{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .navItem{
+            text-decoration: none;
+            color: #0e153a;
+            padding: 10px;
+        }
+        .navItem:hover{
+            background-color: #cabbe9;
+            color: whitesmoke;
+            border: none;
+            border-radius: 15px;
+        }
+
+        @media screen and (max-width: 480px){
+            header{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 10px 5px;
+            }
+            .navBtn{
+                width: 30px;
+                height: 30px;
+                display: block;
+                background-color: #21e6c1;
+                border: none;
+                box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                border-radius: 5px;
+            }
+            .navBtn:focus{
+                outline: none;
+            }
+            .navBtn:active{
+                background-color: #1ef7cf;
+            }
+            .nav{   
+                width: 100%;
+                display: none;
+                margin-top: 5px;
+                margin-left: 0px;
+            }
+            .navList li{
+                display: block;
+                margin-top: 20px;
+            }
+            .navItem{
+                background-color: #74f6a7;
+                color: #f8f8f8;
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                margin-bottom: -10px;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+            }
+            .navItem:hover{
+                background-color: #3bc572;
+                color: #ffffff;
+            }
+            
+        }
+        .show-nav{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="pf">
+            <h1>My <span>Profile</span></h1>
+        </div>
+        <button class="navBtn"><i class="far fa-caret-square-down fa-2x"></i></button>
+        <nav class="nav">
+            <ul class="navList">
+                <li><a href="" class="navItem">Home</a></li>
+                <li><a href="" class="navItem">Profile</a></li>
+                <li><a href="" class="navItem">Projects</a></li>
+                <li><a href="" class="navItem">About</a></li>
+                <li><a href="" class="navItem" style="margin-bottom: 10px;">contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+<script>
+    let nav = document.querySelector("nav");
+    let btn = document.querySelector(".navBtn");
+    btn.addEventListener("click", () => {nav.classList.toggle("show-nav")});
+</script>
+</body>
+</html>

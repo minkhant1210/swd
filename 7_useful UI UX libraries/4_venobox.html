@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venobox</title>
+    <link rel="stylesheet" href="vendor/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/vendor/venobox/venobox.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-columns my-5 ">
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 1
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="aa" href="../1,2-html,css/img/5.jpg">
+                                <img src="../1,2-html,css/img/GFRIEND-LOVE-WHISPER-MV-Shooting-Eunha-gfriend-40644167-1200-799.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 2
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="aa" href="../1,2-html,css/img/6.jpg">
+                                <img src="../1,2-html,css/img/1.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 3
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="aa" href="../1,2-html,css/img/7.jpg">
+                                <img src="../1,2-html,css/img/2.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 4
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="myGallery" href="../1,2-html,css/img/8.jpg">
+                                <img src="../1,2-html,css/img/3.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 5
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="myGallery" href="../1,2-html,css/img/9.jpg">
+                                <img src="../1,2-html,css/img/4.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Venobox 6
+                        </div>
+                        <div class="card-body">
+                            <a class="venobox" data-gall="myGallery" href="../1,2-html,css/img/10.jpg">
+                                <img src="../1,2-html,css/img/part-4.jpg" class="img-fluid" alt="image alt"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+<script src="vendor/vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/vendor/venobox/venobox.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.venobox').venobox({
+            framewidth : '400px',                            // default: ''
+            frameheight: 'auto',                            // default: ''
+            border     : '2px',                             // default: '0'
+            bgcolor    : '#ffffff60',                          // default: '#fff'
+            titleattr  : 'data-title',                       // default: 'title'
+            numeratio  : true,                               // default: false
+            infinigall : true,                               // default: false
+            share      : ['facebook', 'twitter', 'download'], // default: []
+            spinner    : 'cube-grid'
+            
+        }); 
+    });
+</script>
+</body>
+</html>

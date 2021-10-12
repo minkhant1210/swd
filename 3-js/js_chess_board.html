@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr,td{
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+        }
+        .black{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tbody class="tbody"></tbody>
+    </table>
+
+<script>
+
+    let tbody = document.querySelector(".tbody");
+    for(let i = 1; i <= 8; i++){
+        let td = "";
+        if(i%2 != 0){
+            for(let j = 1; j <= 8; j++){
+            if(j%2 != 0){
+                td += `<td></td>`;
+            }
+            else{
+                td += `<td class="black"></td>`;
+            }
+          }
+        }
+        else{
+            for(let j = 1; j <= 8; j++){
+            if(j%2 != 0){
+                td += `<td class="black"></td>`;
+            }
+            else{
+                td += `<td></td>`;
+            }
+          }
+        }
+
+        tbody.innerHTML +=  `<tr>${td}</tr>`;
+    }
+
+</script>
+    
+</body>
+</html>

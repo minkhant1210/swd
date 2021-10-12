@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Chainning Callback</title>
+    <style>
+        .obj{
+            width: 300px;
+            height: 100px;
+            background-color: chocolate;
+            margin-top: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="animate">Animate</button>
+    <button class="stop">Stop</button>
+    <div class="obj"></div>
+
+    <button class="chain">Chain</button>
+    <p class="obj2">Min Galar Par</p>
+
+<script src="js/jQuery.js"></script>
+<script>
+
+    $(".animate").click(() => {
+        $(".obj").animate({left:"200px",top:"200px",width:"500px",height:"300px",opacity: 0.4},3000,() => {
+            console.log("The object is animated");
+        });
+    });
+
+    $(".stop").click(() => {
+        $(".obj").stop();
+    });
+
+    $(".chain").click(() =>{
+        $(".obj2").css("color","blue").slideUp(2000).slideToggle(1000).animate({fontSize: "2rem"})
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bg-grey{
+            background-color: grey;
+        }
+        .bg-skyblue{
+            background-color: skyblue;
+        }
+        .bg-orangered{
+            background-color: orangered;
+        }
+
+        .one{
+            height: 50vh;
+            background-color: #5f5f55;
+            display: flex;
+        }
+        .part-1{
+            flex-grow:1;
+        }
+        .part-1.right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two{
+            width: 990px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: -80px;
+        }
+        .part-2{
+            padding: 20px 15px;
+            text-align: center;
+            width: 300px;
+            /* margin-top: -90px; */
+            background-color: #fff;
+            box-shadow: 0 0 25px #00000060;
+        }
+
+        .three{
+            width: 990px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .part-3{
+            width: 500px;
+            text-align: center;
+        }
+
+        .four{
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .four-text{
+            width: 450px;
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        .five{
+            background-color:#fff;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .five-text{
+            text-align: right;
+            margin-right: 40px;
+        }
+
+        @media screen and (max-width:480px){
+            .one,.two,.three,.four,.five{
+                flex-direction: column;
+            }
+            section,div{
+                max-width: 100% !important;
+            }
+            .part-3{
+                max-width: 100%;
+            }
+            .two{
+                margin-top: -30px;
+                align-items: center;
+                /* margin: auto; */
+            }
+            .four-text{
+                max-width: 350px;
+            }
+            .five-text{
+                text-align: center;
+                max-width: 350px;
+            }
+    
+    </style>
+</head>
+<body>
+    
+    <section class="one">
+        <div class="part-1 left bg-grey"></div>
+        <div class="part-1 right bg-skyblue">
+            <div style="width: 300px; ">
+                <h1>This is right</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur placeat qui harum, illo error expedita? Natus rerum ipsam maxime, magni cupiditate optio dignissimos neque. Impedit adipisci ea maiores et.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="two">
+        <div class="part-2">
+            <h2>This is one</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus molestias dolorem, minus aperiam numquam dignissimos esse, facilis quos temporibus at odit! Quaerat quia sint consequuntur laboriosam esse omnis nisi facilis.
+            </p>
+        </div>
+        <div class="part-2">
+            <h1>This is two</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, ducimus! Officiis debitis doloremque natus quasi facere beatae illum perspiciatis inventore, mollitia cumque voluptatum quam sapiente necessitatibus sunt suscipit numquam dolorem.
+            </p>
+        </div>
+        <div class="part-2">
+            <h1>This is three</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto velit vel temporibus vitae ducimus, ullam repudiandae facilis eum aliquam libero in amet nam quibusdam. Exercitationem ipsum assumenda eveniet dolorum!
+            </p>
+        </div>
+    </section>
+
+    <section class="three">
+        <div class="part-3">
+            <h1>This is Part Three</h1>
+            <p style="margin-top: 20px; line-height: 20px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid nesciunt officia tenetur optio dolore dolorem iste, fuga eligendi perferendis tempore! Magni culpa necessitatibus placeat ab, accusamus officia iure vero.
+            </p>
+        </div>
+    </section>
+
+    <section class="four">
+        <img src="img/part-4.jpg" width="450px" alt="">
+        <div class="four-text">
+            <h1>This is Part Four</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptatum dicta alias cumque at repellendus sapiente ratione nulla hic distinctio, tempora, enim veniam. Molestias non rerum excepturi sit incidunt tempora?
+            </p>
+        </div>
+    </section>
+
+    <section class="four five">
+        <img src="img/part-4.jpg" width="450px" alt="">
+        <div class="four-text five-text">
+            <h1>This is Part Four</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptatum dicta alias cumque at repellendus sapiente ratione nulla hic distinctio, tempora, enim veniam. Molestias non rerum excepturi sit incidunt tempora?
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

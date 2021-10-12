@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Fade Slide</title>
+    <style>
+        .obj{
+            width: 300px;
+            height: 200px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="toggle">Toggle</button>
+    <button class="fadeIn">FadeIn</button>
+    <button class="fadeOut">FadeOut</button>
+    <button class="fadeToggle">FadeToggle</button>
+    <button class="fadeTo">FadeTO</button>
+    <button class="slideDown">SlideDown</button>
+    <button class="slideUp">SlideUp</button>
+    <button class="slideToggle">SlideToggle</button>
+    <div class="obj"></div>
+
+<script src="js/jQuery.js"></script>
+<script>
+
+    $(".hide").click(function(){
+        $(".obj").hide(1000,() => {
+            console.log("The object is hidden");
+        });
+    });
+
+    $(".show").click(() => {
+        $(".obj").show(1000, () => {
+            console.log("The object is showed");
+        });
+    });
+
+    $(".toggle").click(() => {
+        $(".obj").toggle(1000, () => {
+            console.log("The object is toggled")
+        });
+    });
+
+    $(".fadeIn").click(() => {
+        $(".obj").fadeIn(1000, () => {
+            console.log("The object is fadded in");
+        });
+    });
+
+    $(".fadeOut").click(() => {
+        $(".obj").fadeOut(1000, () => {
+            console.log("The Object is fadded out");
+        });
+    });
+
+    $(".fadeToggle").click(() => {
+        $(".obj").fadeToggle(1000, () => {
+            console.log("The object is fadded toggle");
+        });
+    });
+
+    $(".fadeTo").click(() => {
+        $(".obj").fadeTo(1000, 0.5, () => {
+            console.log("The object is fadded to opaticy 0.5");
+        });
+    });
+
+    $(".slideDown").click(() => {
+        $(".obj").slideDown(1500, () => {
+            console.log("The object is slided down");
+        });
+    });
+
+    $(".slideUp").click(() => {
+        $(".obj").slideUp(1500, () => {
+            console.log("The object is slided Up");
+        });
+    });
+
+    $(".slideToggle").click(() => {
+        $(".obj").slideToggle(1500, () => {
+            console.log("The object is slided Toggle");
+        });
+    });
+
+</script>
+</body>
+</html>

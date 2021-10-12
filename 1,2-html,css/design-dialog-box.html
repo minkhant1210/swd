@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Dialog Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pseudoElement::before{
+            content: "Hello...";
+            color: darkcyan;
+        }
+        .align{
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        .pseudoElement::after{
+            content: "Morning!";
+            color: cornflowerblue;
+        }
+        .box-1{
+            width: 200px;
+            height: 100px;
+            background-color: darkgrey;
+            border-radius: 10px;
+            margin-left: 200px;
+            margin-top: 30px;
+        }
+        .box-2{
+            background-color: darkgrey;
+            border: 20px solid white;
+            display: inline-block;
+            border-top-color: darkgray;
+            margin-left: 320px;
+            margin-top: 0px;
+        }
+        .box-3{
+            background-color: darkolivegreen;
+            position: relative;
+        }
+        .box-3::after{
+            content: "";
+            background-color: black;
+            position: absolute;
+            display: inline-block;
+            bottom: -50px;
+            margin-left: 110px;
+            border: 25px solid white;
+            border-top-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3 style="text-align: center; margin-top: 30px;">Pseudo Elements</h3>
+    <p class="pseudoElement align">
+        Min Galar Par.
+    </p>
+    <hr>
+
+    <h4 style="margin:20px 0px 0px 30px;">Dialog-box-without-pseudoElements</h4>
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <hr>
+
+    <h4 style="margin:20px 0px 0px 30px;">Dialog-box-with-pseudoElements</h4>
+    <div class="box-1 box-3"></div>
+
+</body>
+</html>

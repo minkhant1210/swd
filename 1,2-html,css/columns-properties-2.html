@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Properties-2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 15px;
+        }
+        .header{
+            margin-bottom: 20px;
+            text-align: center;
+            color: #3d6cb9;
+        }
+        span{
+            color: #00d1ff;
+        }
+        .gallery{
+            columns: 3 300px;
+            column-gap: 10px;
+            /* width: 1000px; */
+
+        }
+        .images{
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 10px;
+        }
+        .images:hover{
+            filter: contrast(115%);
+        }
+        @media screen and (max-width:480px){
+            body{
+                margin: 10px;
+            }
+            .header{
+                margin-bottom: 10px;
+            }
+            .images{
+                margin-bottom: 5px;
+            }
+        }
+            
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="header"><span>Dota</span> Gallery</h1>
+    <div class="gallery">
+        <img src="img/1.jpg" alt="" class="images">
+        <img src="img/11.png" alt="" class="images">
+        <img src="img/3.jpg" alt="" class="images">
+        <img src="img/4.jpg" alt="" class="images">
+        <img src="img/5.jpg" alt="" class="images">
+        <img src="img/6.jpg" alt="" class="images">
+        <img src="img/7.jpg" alt="" class="images">
+        <img src="img/8.jpg" alt="" class="images">
+        <img src="img/9.jpg" alt="" class="images">
+        <img src="img/10.jpg" alt="" class="images">
+        <img src="img/2.jpg" alt="" class="images">
+    </div>
+
+</body>
+</html>
