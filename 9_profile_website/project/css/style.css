@@ -100,6 +100,10 @@ html{
 .social-v a{
     display: block;
     margin-bottom: 10px;
+    transition: 0.3s;
+}
+.social-v a:hover{
+    transform: scale(1.2);
 }
 
 /* about */
@@ -160,6 +164,12 @@ html{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+}
+.social-icon img{
+    transition: 0.3s;
+}
+.social-icon img:hover{
+    transform: scale(1.2);
 }
 .footer{
     background-image: url(../img/footer-2.svg),url("../img/footer-1.svg");

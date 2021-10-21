@@ -1,3 +1,10 @@
+    // loader
+    $(window).on("load", function(){
+      $(".loader-container").fadeOut(500, function(){
+        $(this).remove();
+      })
+    })
+    
     let windowHeight = $(window).height();
     // console.log(windowHeight);
 
